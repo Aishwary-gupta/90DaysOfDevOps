@@ -1,12 +1,12 @@
-# 🐧 Day 02 - Linux Architecture, Processes & systemd
+#  Day 02 - Linux Architecture, Processes & systemd
 
-## 🎯 Objective
+##  Objective
 
 Understand how Linux works internally by learning about its architecture, process management, and the role of `systemd` in managing services.
 
 ---
 
-# 🏗️ Linux Architecture
+#  Linux Architecture
 
 Linux consists of three major layers:
 
@@ -55,7 +55,7 @@ Examples:
 
 ---
 
-# ⚙️ Linux Boot Process
+#  Linux Boot Process
 
 ```text
 Power On
@@ -75,7 +75,7 @@ User Login
 
 ---
 
-# 🔄 Processes in Linux
+#  Processes in Linux
 
 A **Process** is a running instance of a program.
 
@@ -89,7 +89,7 @@ Each process has:
 
 ---
 
-# 📌 Process States
+#  Process States
 
 | State | Meaning                                         |
 | ----- | ----------------------------------------------- |
@@ -102,7 +102,7 @@ Each process has:
 
 ---
 
-# 🚀 systemd
+#  systemd
 
 `systemd` is the first userspace process started by Linux (PID 1).
 
@@ -143,7 +143,7 @@ journalctl -f
 
 ---
 
-# 💡 Key Learnings
+#  Key Learnings
 
 * The Kernel manages all communication between software and hardware.
 * Every running application is a process identified by a unique PID.
