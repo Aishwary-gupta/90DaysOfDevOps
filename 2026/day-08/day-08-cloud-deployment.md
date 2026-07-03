@@ -87,5 +87,6 @@ cat nginx-logs.txt
 
 # Screenshots Included
 
-C:\Users\admin\OneDrive\Pictures\Screenshots\Screenshot 2026-07-03 093244.png
-C:\Users\admin\OneDrive\Pictures\Screenshots\Screenshot 2026-07-03 093050.png
+\day-08\Screenshot 2026-07-03 093244.png
+\day-08\Screenshot 2026-07-03 093050.png
+
