@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask + PostgreSQL Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 60px auto;
+            background: #f5f6fa;
+            color: #2f3640;
+        }
+        h1 {
+            color: #273c75;
+        }
+        form {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 16px;
+            background: #273c75;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #192a56;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        small {
+            color: #718093;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask + PostgreSQL</h1>
+    <p>This page reads and writes rows from a PostgreSQL database running in its own container.</p>
+
+    <form action="/add" method="POST">
+        <input type="text" name="content" placeholder="Type a message..." required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Stored Messages</h2>
+    <ul>
+        {% for id, content, created_at in messages %}
+        <li>
+            {{ content }}
+            <br>
+            <small>#{{ id }} — {{ created_at }}</small>
+        </li>
+        {% else %}
+        <li>No messages yet. Add one above.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
