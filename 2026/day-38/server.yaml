@@ -1,0 +1,21 @@
+server:
+  name: production-server
+  ip: 192.168.1.100
+  port: 8080
+
+database:
+  host: localhost
+  name: devops_db
+  credentials:
+    user: devops_user
+    password: secure_password
+
+startup_script: |
+  echo "Starting application"
+  echo "Checking database"
+  echo "Starting server"
+
+startup_message: >
+  This is a startup message
+  that YAML will fold
+  into a single line.
